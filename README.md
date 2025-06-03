@@ -1,37 +1,37 @@
 # RSAKeyGenerator
 
-Download Windows OpenSSL from the following URL:
+# RSA Key Generator Setup and Usage
 
-https://slproweb.com/download/Win64OpenSSL-3_5_0.msi 
+1. **Download Windows OpenSSL** from the following URL:  
+   [https://slproweb.com/download/Win64OpenSSL-3_5_0.msi](https://slproweb.com/download/Win64OpenSSL-3_5_0.msi)
 
-install to C:\Program Files\OpenSSL-Win64 and choose the binaries to be on bin directory.
+2. **Install OpenSSL** to `C:\Program Files\OpenSSL-Win64` and make sure to include the binaries in the `bin` directory.
 
+3. **Download the repository** and extract it to `C:\`
 
+   The files will be available at:  
+   `C:\RSAKeyGenerator-main`
 
-Download the repository and extract to C:\ 
+4. **Run Windows PowerShell ISE as Administrator.**
 
-The Files will be available on: 
-C:\RSAKeyGenerator-main
+5. **Open the script file** `ExecuteGenerate-RSAKeys.ps1`.
 
+6. **Replace parameter values** in the script:  
+   - `BillerCode`  
+   - `BillerName`  
+   - `Environment` (set to `"Test"` or `"Prod"`)  
+   - `OpenSSL Installation Path`
 
-Run Windows PowerShell ISE as Administrator 
+7. **Run the script.**
 
-Open script file ExecuteGenerate-RSAKeys.ps1 
+8. If you encounter the error:
 
-Replace Parameter values (BillerCode, BillerName, Environment "Test or Prod" and OpenSSL Installation Path)
+   > *"The script is not digitally signed. You cannot run this script on the current system. For more information about running scripts and setting execution policy..."*
 
-Run the Script 
+   Execute one of the following commands in PowerShell to allow script execution temporarily or for your user:
 
-If you encounter an error "not digitally signed. You cannot run this script on the current system. For more information about running scripts and setting execution policy"
-Execute the following command:
-
- Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass 
- or 
- Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-
-after that rerun the script 
-
-2 files should be generated and saved to the main driectory (RSA Public and Private Keys)
+   ```powershell
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 
 
