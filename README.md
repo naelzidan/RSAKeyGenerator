@@ -17,8 +17,8 @@
 5. **Open the script file** `ExecuteGenerate-RSAKeys.ps1`.
 
 6. **Replace parameter values** in the script:  
-   - `BillerCode`  
-   - `BillerName`  
+   - `BillerCode`  *"Code Provided By E-Sadad Team"*
+   - `BillerName`   *"English Name"* 
    - `Environment` (set to `"Test"` or `"Prod"`)  
    - `OpenSSL Installation Path`
 
@@ -30,8 +30,22 @@
 
    Execute one of the following commands in PowerShell to allow script execution temporarily or for your user:
 
-   ```powershell
+  
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+   or
+   
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+9. **Then rerun the script.**
+
+10. After successful execution, two files will be generated and saved in the main directory:
+
+   - RSA Public Key
+   
+   - RSA Private Key
+
+
 
 
 
