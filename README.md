@@ -1,5 +1,12 @@
 # RSAKeyGenerator
 
+Download Windows OpenSSL from the following URL:
+
+https://slproweb.com/download/Win64OpenSSL-3_5_0.msi 
+
+install to C:\Program Files\OpenSSL-Win64 and choose the binaries to be on bin directory.
+
+
 
 Download the repository and extract to C:\ 
 
